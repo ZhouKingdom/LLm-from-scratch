@@ -163,20 +163,22 @@ cython_debug/
 *.zip
 
 # PyTorch / model artifacts (keep repos lean)
-*.pt
-*.pth
-*.ckpt
-*.bin
-*.npy
-*.npz
-*.onnx
-checkpoints/
-checkpoint*/
-best_checkpoint.pt
+# NOTE: only ignore these at the repo ROOT (not under tests/, which needs
+# .pt/.npz snapshot fixtures to run the unit tests).
+/*.pt
+/*.pth
+/*.ckpt
+/*.bin
+/*.npy
+/*.npz
+/*.onnx
+/checkpoints/
+/checkpoint*/
+/best_checkpoint.pt
+/gen/
 
 # Generated outputs / logs
-gen/
-logs/
+/logs/
 *.log
 test_results.xml
 
